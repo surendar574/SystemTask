@@ -119,6 +119,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.stopUpdatingLocation()
         
     }
+
     
     func drawRectange(cordiantes: CLLocationCoordinate2D){
         /* create the path */
