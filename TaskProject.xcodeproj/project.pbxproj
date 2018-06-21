@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC1A53D67E349B8556F880F /* Pods_TaskProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5554C035036EDF70A4984FC7 /* Pods_TaskProject.framework */; };
 		1EACE20F20DAB9C600681E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACE20E20DAB9C600681E84 /* AppDelegate.swift */; };
 		1EACE21120DAB9C600681E84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACE21020DAB9C600681E84 /* ViewController.swift */; };
 		1EACE21420DAB9C600681E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EACE21220DAB9C600681E84 /* Main.storyboard */; };
 		1EACE21620DAB9C600681E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EACE21520DAB9C600681E84 /* Assets.xcassets */; };
 		1EACE21920DAB9C600681E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EACE21720DAB9C600681E84 /* LaunchScreen.storyboard */; };
+		1EACE22120DABFCE00681E84 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EACE22020DABFCE00681E84 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		1EACE21520DAB9C600681E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EACE21820DAB9C600681E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EACE21A20DAB9C600681E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EACE22020DABFCE00681E84 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5554C035036EDF70A4984FC7 /* Pods_TaskProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61742DC5B91E1E61FF3FAE52 /* Pods-TaskProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskProject/Pods-TaskProject.debug.xcconfig"; sourceTree = "<group>"; };
+		DB19DEAEED8D7D295745A778 /* Pods-TaskProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskProject/Pods-TaskProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EACE22120DABFCE00681E84 /* CoreLocation.framework in Frameworks */,
+				0AC1A53D67E349B8556F880F /* Pods_TaskProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11BE1FD5BD8D29F8F53A804D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61742DC5B91E1E61FF3FAE52 /* Pods-TaskProject.debug.xcconfig */,
+				DB19DEAEED8D7D295745A778 /* Pods-TaskProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1521AEA2C990DDE2CD05B073 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EACE22020DABFCE00681E84 /* CoreLocation.framework */,
+				5554C035036EDF70A4984FC7 /* Pods_TaskProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1EACE20220DAB9C600681E84 = {
 			isa = PBXGroup;
 			children = (
 				1EACE20D20DAB9C600681E84 /* TaskProject */,
 				1EACE20C20DAB9C600681E84 /* Products */,
+				11BE1FD5BD8D29F8F53A804D /* Pods */,
+				1521AEA2C990DDE2CD05B073 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EACE21D20DAB9C600681E84 /* Build configuration list for PBXNativeTarget "TaskProject" */;
 			buildPhases = (
+				63D701603920E5F4FE117FCF /* [CP] Check Pods Manifest.lock */,
 				1EACE20720DAB9C600681E84 /* Sources */,
 				1EACE20820DAB9C600681E84 /* Frameworks */,
 				1EACE20920DAB9C600681E84 /* Resources */,
+				7F960910420568B847AF2760 /* [CP] Embed Pods Frameworks */,
+				EEB4B8A45EC1D2F337956EFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +161,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63D701603920E5F4FE117FCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaskProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F960910420568B847AF2760 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaskProject/Pods-TaskProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB4B8A45EC1D2F337956EFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaskProject/Pods-TaskProject-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaskProject/Pods-TaskProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1EACE20720DAB9C600681E84 /* Sources */ = {
@@ -272,29 +358,35 @@
 		};
 		1EACE21E20DAB9C600681E84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61742DC5B91E1E61FF3FAE52 /* Pods-TaskProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C6JCR6Z6F;
 				INFOPLIST_FILE = TaskProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.TaskProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1EACE21F20DAB9C600681E84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB19DEAEED8D7D295745A778 /* Pods-TaskProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C6JCR6Z6F;
 				INFOPLIST_FILE = TaskProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.TaskProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
